@@ -74,7 +74,7 @@ namespace PrviParcijalniPR3
         {
             InMemoryDB.GenerisiCifre();
             if (!string.IsNullOrEmpty(polje.Text))
-                txtBrojIndeksa.Text = polje.Text + InMemoryDB.IndeksGeneratorZadnjaCifra + InMemoryDB.IndeksGeneratorSrednjaCifra + InMemoryDB.IndeksGeneratorPrvaCifra;
+                txtBrojIndeksa.Text = polje.Text + InMemoryDB.IndeksGeneratorZadnjaCifra.ToString() + InMemoryDB.IndeksGeneratorSrednjaCifra.ToString() + InMemoryDB.IndeksGeneratorPrvaCifra.ToString();
             else
                 MessageBox.Show("Unesite predvidjena polja!");
         }

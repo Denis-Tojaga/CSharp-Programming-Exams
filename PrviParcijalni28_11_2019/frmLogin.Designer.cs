@@ -105,7 +105,6 @@
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(183, 20);
             this.txtEmail.TabIndex = 8;
-            this.txtEmail.Text = "@edu.fit.ba";
             // 
             // label4
             // 

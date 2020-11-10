@@ -177,6 +177,7 @@
             this.Controls.Add(this.txtBrojIndeksa);
             this.Controls.Add(this.label1);
             this.Name = "frmDetaljniPodaci";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDetaljniPodaci";
             this.Load += new System.EventHandler(this.frmDetaljniPodaci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSlikaKorisnika)).EndInit();

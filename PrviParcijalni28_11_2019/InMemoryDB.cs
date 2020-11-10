@@ -24,11 +24,11 @@ namespace PrviParcijalniPR3
             if (IndeksGeneratorPrvaCifra > 9)
             {
                 IndeksGeneratorPrvaCifra = 0;
-                IndeksGeneratorSrednjaCifra++;
+                ++IndeksGeneratorSrednjaCifra;
                 if (IndeksGeneratorSrednjaCifra > 9)
                 {
                     IndeksGeneratorSrednjaCifra = 0;
-                    IndeksGeneratorZadnjaCifra++;
+                    ++IndeksGeneratorZadnjaCifra;
                 }
             }
         }
