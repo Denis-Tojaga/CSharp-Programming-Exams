@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.dgvStudenti = new System.Windows.Forms.DataGridView();
-            this.BrojIndeksa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BrojPolozenih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUnosBrojaIndeksa = new System.Windows.Forms.TextBox();
             this.btnPrikaziDetalje = new System.Windows.Forms.Button();
             this.btnDodajStudenta = new System.Windows.Forms.Button();
             this.lblPrikazaniStud = new System.Windows.Forms.Label();
+            this.BrojIndeksa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BrojPolozenih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudenti)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,50 +55,6 @@
             this.dgvStudenti.Name = "dgvStudenti";
             this.dgvStudenti.Size = new System.Drawing.Size(802, 314);
             this.dgvStudenti.TabIndex = 0;
-            // 
-            // BrojIndeksa
-            // 
-            this.BrojIndeksa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BrojIndeksa.DataPropertyName = "BrojIndeksa";
-            this.BrojIndeksa.HeaderText = "Broj Indeksa";
-            this.BrojIndeksa.Name = "BrojIndeksa";
-            this.BrojIndeksa.ReadOnly = true;
-            this.BrojIndeksa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Ime
-            // 
-            this.Ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ime.DataPropertyName = "Ime";
-            this.Ime.HeaderText = "Ime";
-            this.Ime.Name = "Ime";
-            this.Ime.ReadOnly = true;
-            this.Ime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Prezime
-            // 
-            this.Prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Prezime.DataPropertyName = "Prezime";
-            this.Prezime.HeaderText = "Prezime";
-            this.Prezime.Name = "Prezime";
-            this.Prezime.ReadOnly = true;
-            this.Prezime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // BrojPolozenih
-            // 
-            this.BrojPolozenih.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BrojPolozenih.HeaderText = "Broj Polozenih";
-            this.BrojPolozenih.Name = "BrojPolozenih";
-            this.BrojPolozenih.ReadOnly = true;
-            this.BrojPolozenih.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // label1
             // 
@@ -149,6 +105,51 @@
             this.lblPrikazaniStud.TabIndex = 5;
             this.lblPrikazaniStud.Text = "Prikazano je 2 studenta i njihov prosjek je 0,00";
             // 
+            // BrojIndeksa
+            // 
+            this.BrojIndeksa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BrojIndeksa.DataPropertyName = "BrojIndeksa";
+            this.BrojIndeksa.HeaderText = "Broj Indeksa";
+            this.BrojIndeksa.Name = "BrojIndeksa";
+            this.BrojIndeksa.ReadOnly = true;
+            this.BrojIndeksa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Ime
+            // 
+            this.Ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ime.DataPropertyName = "Ime";
+            this.Ime.HeaderText = "Ime";
+            this.Ime.Name = "Ime";
+            this.Ime.ReadOnly = true;
+            this.Ime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Prezime
+            // 
+            this.Prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Prezime.DataPropertyName = "Prezime";
+            this.Prezime.HeaderText = "Prezime";
+            this.Prezime.Name = "Prezime";
+            this.Prezime.ReadOnly = true;
+            this.Prezime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // BrojPolozenih
+            // 
+            this.BrojPolozenih.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BrojPolozenih.DataPropertyName = "BrojPolozenihPredmeta";
+            this.BrojPolozenih.HeaderText = "Broj Polozenih";
+            this.BrojPolozenih.Name = "BrojPolozenih";
+            this.BrojPolozenih.ReadOnly = true;
+            this.BrojPolozenih.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // frmStudenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,12 +178,12 @@
         private System.Windows.Forms.TextBox txtUnosBrojaIndeksa;
         private System.Windows.Forms.Button btnPrikaziDetalje;
         private System.Windows.Forms.Button btnDodajStudenta;
+        private System.Windows.Forms.Label lblPrikazaniStud;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrojIndeksa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn BrojPolozenih;
-        private System.Windows.Forms.Label lblPrikazaniStud;
     }
 }
 

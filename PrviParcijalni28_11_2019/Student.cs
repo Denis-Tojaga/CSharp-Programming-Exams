@@ -9,6 +9,8 @@ namespace PrviParcijalniPR3
 {
     public class Student
     {
+        public int PredmetGenerator { get; set; } = 0;
+
         public Random randomOcjena = new Random();
         public int IndekserPredmeta { get; set; } = 0;
         public string BrojIndeksa { get; set; }
@@ -17,6 +19,7 @@ namespace PrviParcijalniPR3
         public string Email { get; set; }
         public double Prosjek { get; set; }
         public Image Slika { get; set; }
+        public int BrojPolozenihPredmeta { get; set; }
         static public List<Predmet> Predmeti { get; set; }
 
 
@@ -24,18 +27,24 @@ namespace PrviParcijalniPR3
         {
             Predmeti = new List<Predmet>();
             GenerisiPredmeteStudentu();
+            Prosjek = ProsjekStudenta();
+            PrebrojPolozene();
         }
 
         private void GenerisiPredmeteStudentu()
         {
-            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(6, 10) });
-            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(6, 10) });
-            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(6, 10) });
-            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(6, 10) });
-            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(6, 10) });
+            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(5, 10), NazivPredmeta = "Predmet" + (++PredmetGenerator).ToString(),datumPolaganja=DateTime.Now });
+            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(5, 10), NazivPredmeta = "Predmet" + (++PredmetGenerator).ToString(),datumPolaganja=DateTime.Now });
+            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(5, 10), NazivPredmeta = "Predmet" + (++PredmetGenerator).ToString(),datumPolaganja=DateTime.Now });
+            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(5, 10), NazivPredmeta = "Predmet" + (++PredmetGenerator).ToString(),datumPolaganja=DateTime.Now });
+            Predmeti.Add(new Predmet() { Ocjena = randomOcjena.Next(5, 10), NazivPredmeta = "Predmet" + (++PredmetGenerator).ToString(),datumPolaganja=DateTime.Now });
         }
-
-
+        private void PrebrojPolozene()
+        {
+            foreach (var predmet in Predmeti)
+                if (predmet.Ocjena > 5)
+                    BrojPolozenihPredmeta++;
+        }
         static public double ProsjekStudenta()
         {
             double prosjek = 0;
@@ -45,6 +54,5 @@ namespace PrviParcijalniPR3
                 prosjek += predmet.Ocjena;
             return prosjek / Predmeti.Count;
         }
-
     }
 }

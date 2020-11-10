@@ -10,3 +10,15 @@ C:\Users\Denis\source\repos\PrviParcijalniPR3\obj\Debug\PrviParcijalniPR3.exe
 C:\Users\Denis\source\repos\PrviParcijalniPR3\obj\Debug\PrviParcijalniPR3.pdb
 C:\Users\Denis\source\repos\PrviParcijalniPR3\obj\Debug\PrviParcijalniPR3.frmLogin.resources
 C:\Users\Denis\source\repos\PrviParcijalniPR3\obj\Debug\PrviParcijalniPR3.frmDetaljniPodaci.resources
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\bin\Debug\PrviParcijalniPR3.exe.config
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\bin\Debug\PrviParcijalniPR3.exe
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\bin\Debug\PrviParcijalniPR3.pdb
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.csprojAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.frmDetaljniPodaci.resources
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.frmStudenti.resources
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.frmLogin.resources
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.Properties.Resources.resources
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.csproj.GenerateResource.cache
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.exe
+C:\Users\Denis\Documents\GitHub\CSharp-Programming-Exams\PrviParcijalni28_11_2019\obj\Debug\PrviParcijalniPR3.pdb
