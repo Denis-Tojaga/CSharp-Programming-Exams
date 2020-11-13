@@ -49,12 +49,19 @@ namespace PrviParcijalniPR3
        
         private void txtUnosBrojaIndeksa_TextChanged(object sender, EventArgs e)
         {
-            List<Student> filtrirani = new List<Student>();
-            foreach (var student in InMemoryDB.Studenti)
-                if(txtUnosBrojaIndeksa.Text.Contains(student.BrojIndeksa))
-                    filtrirani.Add(student);
+            if (!string.IsNullOrEmpty(txtUnosBrojaIndeksa.Text))
+            {
+                //ukoliko postoje studenti koji sadrze uneseni tekst u pretragu onda ih spremi u posebnu listu koja ce postati izvor dataGrid-a
+                string pretraga = txtUnosBrojaIndeksa.Text;
+                var filtriraniStudenti = InMemoryDB.Studenti.Where(student => pretraga.ToUpper().Contains(student.BrojIndeksa)).ToList();
+                dgvStudenti.DataSource = null;
+                dgvStudenti.DataSource = filtriraniStudenti;
+                return;
+            }
+
+            //ukoliko se opet vrati u pocetno stanje gdje je prazan textBox ili korisnik obrise uneseni sadrzaj onda izvod opet postaju trenutni studenti iz baze
             dgvStudenti.DataSource = null;
-            dgvStudenti.DataSource = filtrirani;
+            dgvStudenti.DataSource = InMemoryDB.Studenti;
         }
 
         private void btnPrikaziDetalje_Click(object sender, EventArgs e)
