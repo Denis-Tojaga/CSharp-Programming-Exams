@@ -115,7 +115,6 @@ namespace cSharpIntroWinForms.P8
             cmbPredmeti.DisplayMember = "Naziv";
             cmbPredmeti.ValueMember = "Id";
         }
-
         private void btnPrintajUvjerenje_Click(object sender, EventArgs e)
         {
             dtoKorisnikIzvjestaj objekat = new dtoKorisnikIzvjestaj();
@@ -125,18 +124,34 @@ namespace cSharpIntroWinForms.P8
                                  where !(from polozeni in korisnik.Uspjeh select polozeni.Predmet.Id).Contains(predmeti.Id)
                                  select predmeti;
             objekat.Nepolozeni = nepolozeni.ToList();
-            objekat.Polozeni = korisnik.Uspjeh;
+            objekat.Polozeni = DodajJedinstvenePredmete();
             frmIzvjestaj izvjestaj = new frmIzvjestaj(objekat);
             izvjestaj.ShowDialog();
         }
+        private List<KorisniciPredmeti> DodajJedinstvenePredmete()
+        {
+            var ListaJedinstvenih = new List<KorisniciPredmeti>();
+            //prodjemo kroz sve polozene u korisnikovom uspjehu 
+            foreach (var polozeni in korisnik.Uspjeh)
+            {
+                //obavezno ovdje svaki put praviti varijablu koja ce biti postavljena na false
+                 bool vecDodan = false;
 
+                //prodjemo kroz listu u koju trebamo dodati te predmete da sprijecimo dodavanje istih jer smo 500 puta dodali matematiku
+                foreach (var dodan in ListaJedinstvenih)
+                    if (polozeni.Predmet.Id == dodan.Predmet.Id)
+                        vecDodan = true;
+                if (!vecDodan)
+                    ListaJedinstvenih.Add(polozeni);
+            }
+            return ListaJedinstvenih;
+        }
         private void cmbPredmeti_SelectedIndexChanged(object sender, EventArgs e)
         {
             var postoji = korisnik.Uspjeh.Where(x => x.Predmet.Id == (cmbPredmeti.SelectedItem as Predmeti).Id).Count() > 0;
             //ako predmet postoji bit ce disabled ako nepostoji bit ce enabled, uvijek stavlja suprotno
             btnDodajPolozeni.Enabled = !postoji;
         }
-
         private void btnASYNC_Click(object sender, EventArgs e)
         {
             var odabraniPredmet = cmbPredmeti.SelectedItem as Predmeti;
