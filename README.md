@@ -6,5 +6,5 @@ Setup files for start of problem solving and solution code to see the end result
 ***Use the latest Exam template 2020_21 to solve exams***
 <br />
 # Note
-***First do rebuild to start a project, if it's not working delete NuGet package folder "SQLServerTypes" and do rebuild again*** 
+***First do rebuild to start a project, if it won't compile delete NuGet package folder "SQLServerTypes" and do rebuild again*** 
 
